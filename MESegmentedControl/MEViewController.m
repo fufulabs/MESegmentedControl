@@ -7,7 +7,7 @@
 //
 
 #import "MEViewController.h"
-#import "CustomBadge.h"
+#import "MECustomBadge.h"
 
 @implementation MEViewController
 
@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
 }
 
 - (void)viewDidUnload
@@ -26,15 +26,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     // To set standard white on red badges:
     [segmentedControl setBadgeNumber:1 forSegmentAtIndex:0];
     [segmentedControl setBadgeNumber:22 forSegmentAtIndex:1];
 
     // To set a badge with custom colours:
-    [segmentedControl setBadgeNumber:333 forSegmentAtIndex:2 usingBlock:^(CustomBadge *badge)
+    [segmentedControl setBadgeNumber:333 forSegmentAtIndex:2 usingBlock:^(MECustomBadge *badge)
      {
-         // See CustomBadge.h for other badge properties that can be changed here
+         // See MECustomBadge.h for other badge properties that can be changed here
          badge.badgeFrameColor = [UIColor blackColor]; // default is white
          badge.badgeInsetColor = [UIColor yellowColor]; // default is red
          badge.badgeTextColor = [UIColor blackColor]; // default is white
@@ -45,7 +45,7 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    
+
     // Clear the badge numbers
     [segmentedControl clearBadges];
 }

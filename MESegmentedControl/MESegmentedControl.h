@@ -5,7 +5,7 @@
 //  Copyright (c) 2012 David Thompson. All rights reserved.
 //
 
-@class CustomBadge;
+@class MECustomBadge;
 
 @interface MESegmentedControl : UISegmentedControl
 {
@@ -17,8 +17,8 @@
 
 // Set the badge number for a specific segment.
 // Setting the badge number to 0 will clear the badge for that segment.
-// Use the block to make adjustments to badge formatting, using the methods outlined in CustomBadge.h.
-- (void)setBadgeNumber:(NSUInteger)badgeNumber forSegmentAtIndex:(NSUInteger)segmentIndex usingBlock:(void(^)(CustomBadge *))configureBadge;
+// Use the block to make adjustments to badge formatting, using the methods outlined in MECustomBadge.h.
+- (void)setBadgeNumber:(NSUInteger)badgeNumber forSegmentAtIndex:(NSUInteger)segmentIndex usingBlock:(void(^)(MECustomBadge *))configureBadge;
 
 // Convenience method for setting a badge number with default look and feel.
 - (void)setBadgeNumber:(NSUInteger)badgeNumber forSegmentAtIndex:(NSUInteger)segmentIndex;

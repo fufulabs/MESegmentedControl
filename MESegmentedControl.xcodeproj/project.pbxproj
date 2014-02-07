@@ -16,7 +16,7 @@
 		5502CF74156B4CE200C4AC00 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5502CF72156B4CE200C4AC00 /* MainStoryboard.storyboard */; };
 		5502CF77156B4CE200C4AC00 /* MEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF76156B4CE200C4AC00 /* MEViewController.m */; };
 		5502CF81156B4D0500C4AC00 /* MESegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF7E156B4D0500C4AC00 /* MESegmentedControl.m */; };
-		5502CF82156B4D0500C4AC00 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF80156B4D0500C4AC00 /* CustomBadge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5502CF82156B4D0500C4AC00 /* MECustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF80156B4D0500C4AC00 /* MECustomBadge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,8 @@
 		5502CF76156B4CE200C4AC00 /* MEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEViewController.m; sourceTree = "<group>"; };
 		5502CF7D156B4D0500C4AC00 /* MESegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESegmentedControl.h; sourceTree = "<group>"; };
 		5502CF7E156B4D0500C4AC00 /* MESegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESegmentedControl.m; sourceTree = "<group>"; };
-		5502CF7F156B4D0500C4AC00 /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
-		5502CF80156B4D0500C4AC00 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		5502CF7F156B4D0500C4AC00 /* MECustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECustomBadge.h; sourceTree = "<group>"; };
+		5502CF80156B4D0500C4AC00 /* MECustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECustomBadge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 			children = (
 				5502CF7D156B4D0500C4AC00 /* MESegmentedControl.h */,
 				5502CF7E156B4D0500C4AC00 /* MESegmentedControl.m */,
-				5502CF7F156B4D0500C4AC00 /* CustomBadge.h */,
-				5502CF80156B4D0500C4AC00 /* CustomBadge.m */,
+				5502CF7F156B4D0500C4AC00 /* MECustomBadge.h */,
+				5502CF80156B4D0500C4AC00 /* MECustomBadge.m */,
 			);
 			name = "MESegmentedControl Library";
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 				5502CF71156B4CE200C4AC00 /* MEAppDelegate.m in Sources */,
 				5502CF77156B4CE200C4AC00 /* MEViewController.m in Sources */,
 				5502CF81156B4D0500C4AC00 /* MESegmentedControl.m in Sources */,
-				5502CF82156B4D0500C4AC00 /* CustomBadge.m in Sources */,
+				5502CF82156B4D0500C4AC00 /* MECustomBadge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +229,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -247,7 +247,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -295,6 +295,7 @@
 				5502CF7C156B4CE200C4AC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
