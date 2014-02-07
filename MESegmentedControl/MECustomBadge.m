@@ -54,6 +54,9 @@
     self.badgeCornerRoundness = 0.4;
     self.badgeScaleFactor = scale;
     self.badgeShining = shining;
+
+    _shadowOffset = CGSizeMake(1.f, 1.f);
+
     [self autoBadgeSizeWithString:badgeString];
   }
   return self;
@@ -73,6 +76,9 @@
     self.badgeCornerRoundness = 0.40;
     self.badgeScaleFactor = scale;
     self.badgeShining = shining;
+
+    _shadowOffset = CGSizeMake(1.f, 1.f);
+
     [self autoBadgeSizeWithString:badgeString];
   }
   return self;
@@ -128,7 +134,9 @@
   CGContextAddArc(context, maxX - radius, maxY - radius, radius, 0, M_PI/ 2, 0);
   CGContextAddArc(context, minX + radius, maxY - radius, radius, M_PI/ 2, M_PI, 0);
   CGContextAddArc(context, minX + radius, minY + radius, radius, M_PI, M_PI+ M_PI / 2, 0);
-  CGContextSetShadowWithColor(context, CGSizeMake(1.0, 1.0), 3, [[UIColor blackColor] CGColor]);
+
+  if (!CGSizeEqualToSize(self.shadowOffset, CGSizeZero))
+    CGContextSetShadowWithColor(context, self.shadowOffset, 3, [[UIColor blackColor] CGColor]);
   CGContextFillPath(context);
 
   CGContextRestoreGState(context);
