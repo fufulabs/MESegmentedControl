@@ -16,7 +16,7 @@
 		5502CF74156B4CE200C4AC00 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5502CF72156B4CE200C4AC00 /* MainStoryboard.storyboard */; };
 		5502CF77156B4CE200C4AC00 /* MEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF76156B4CE200C4AC00 /* MEViewController.m */; };
 		5502CF81156B4D0500C4AC00 /* MESegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF7E156B4D0500C4AC00 /* MESegmentedControl.m */; };
-		5502CF82156B4D0500C4AC00 /* MECustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF80156B4D0500C4AC00 /* MECustomBadge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5502CF82156B4D0500C4AC00 /* MECustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5502CF80156B4D0500C4AC00 /* MECustomBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -257,6 +257,7 @@
 		5502CF7B156B4CE200C4AC00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MESegmentedControl/MESegmentedControl-Prefix.pch";
 				INFOPLIST_FILE = "MESegmentedControl/MESegmentedControl-Info.plist";
@@ -268,6 +269,7 @@
 		5502CF7C156B4CE200C4AC00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MESegmentedControl/MESegmentedControl-Prefix.pch";
 				INFOPLIST_FILE = "MESegmentedControl/MESegmentedControl-Info.plist";
