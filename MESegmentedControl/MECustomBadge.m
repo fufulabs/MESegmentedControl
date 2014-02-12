@@ -56,6 +56,7 @@
     self.badgeShining = shining;
 
     _shadowOffset = CGSizeMake(1.f, 1.f);
+    _badgeFont = [UIFont boldSystemFontOfSize:12.f];
 
     [self autoBadgeSizeWithString:badgeString];
   }
@@ -78,6 +79,7 @@
     self.badgeShining = shining;
 
     _shadowOffset = CGSizeMake(1.f, 1.f);
+    _badgeFont = [UIFont boldSystemFontOfSize:12.f];
 
     [self autoBadgeSizeWithString:badgeString];
   }
@@ -89,7 +91,7 @@
 - (void)autoBadgeSizeWithString:(NSString *)badgeString {
   CGSize retValue;
   CGFloat rectWidth, rectHeight;
-  CGSize stringSize = [badgeString sizeWithFont:[UIFont boldSystemFontOfSize:12]];
+  CGSize stringSize = [badgeString sizeWithFont:self.badgeFont];
   CGFloat flexSpace;
   if ([badgeString length] >= 2) {
     flexSpace = [badgeString length];
@@ -226,15 +228,12 @@
 
   if ([self.badgeText length] > 0) {
     [badgeTextColor set];
-    CGFloat sizeOfFont = 13.5 * badgeScaleFactor;
-    if ([self.badgeText length] < 2) {
-      sizeOfFont += sizeOfFont * 0.20;
-    }
-    UIFont *textFont = [UIFont boldSystemFontOfSize:sizeOfFont];
+
+    UIFont *textFont = self.badgeFont;
     CGSize textSize = [self.badgeText sizeWithFont:textFont];
     [self.badgeText drawAtPoint:CGPointMake((rect.size.width / 2 - textSize.width / 2), (rect.size.height / 2 - textSize.height / 2)) withFont:textFont];
   }
-
+  
 }
 
 @end
