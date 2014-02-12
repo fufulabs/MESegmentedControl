@@ -24,7 +24,7 @@
  Minor modification made prior to inclusion in MESegmentedControl: badge size reduced to better fit size of UISegmentedControl.
 
  See example project at https://github.com/ckteebe/MECustomBadge for details on how to use MECustomBadge.
-*/
+ */
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
@@ -52,6 +52,7 @@
 @property (nonatomic, readwrite) CGFloat badgeScaleFactor;
 
 @property (nonatomic) CGSize shadowOffset;
+@property (strong, nonatomic) UIFont *badgeFont;
 
 + (MECustomBadge *)customBadgeWithString:(NSString *)badgeString;
 
